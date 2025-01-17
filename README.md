@@ -148,6 +148,51 @@ squares = processor.calculate_squares()
 cubes = processor.calculate_cubes()
 ```
 
+### Input Validation and Error Handling
+- Always validate and sanitize inputs to ensure they are safe and expected.
+- Verify input correctness and handle invalid inputs appropriately.
+- Implement comprehensive error handling to manage all potential failure cases.
+
+**Before**
+
+```python
+def divide(a, b):
+    return a / b
+
+a = float(input("Enter the numerator: "))
+b = float(input("Enter the denominator: "))
+
+result = divide(a, b)
+print(result)
+```
+
+**After**
+
+```python
+def divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return "Error: Division by zero is not allowed."
+    except TypeError:
+        return "Error: Both inputs must be numbers."
+
+def sanitize_input(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+a = sanitize_input("Enter the numerator: ")
+b = sanitize_input("Enter the denominator: ")
+
+result = divide(a, b)
+print(result)
+```
+
+*Ensure that error messages do not reveal sensitive information such as system details, session identifiers, or account information.*
+
 ### Reproducibility
 - Include clear instructions for setting up and running the program.
 - Create requirements files for dependencies.
