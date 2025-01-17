@@ -3,7 +3,7 @@
 **Duration**: 30 min.  
 **Topics**: Code Quality, Readability, Documentation, Structure, Reproducibility, and Testing
 
-## Introduction: Why doing the things right?
+## Introduction: Why doing things right?
 
 Establishing and adopting programming best practices is especially useful for:
 
@@ -105,7 +105,7 @@ class Dog:
         Returns:
         int: The age of the dog in dog years.
         """
-            return self.age * 7
+        return self.age * 7
 ```
 
 ### Code Structure
@@ -149,6 +149,7 @@ cubes = processor.calculate_cubes()
 ```
 
 ### Input Validation and Error Handling
+
 - Always validate and sanitize inputs to ensure they are safe and expected.
 - Verify input correctness and handle invalid inputs appropriately.
 - Implement comprehensive error handling to manage all potential failure cases.
@@ -194,6 +195,7 @@ print(result)
 *Ensure that error messages do not reveal sensitive information such as system details, session identifiers, or account information.*
 
 ### Reproducibility
+
 - Include clear instructions for setting up and running the program.
 - Create requirements files for dependencies.
 
@@ -240,7 +242,7 @@ matplotlib==3.10.0
     - **Coverage**: Aim to cover as many code paths as possible, including edge cases.
 
 - **Structure**: the **AAA** pattern
-    - **Arrang**: Prepare the environment and inputs for the test.
+    - **Arrange**: Prepare the environment and inputs for the test.
     - **Act**: Run the code being tested.
     - **Assert**: Verify that the result matches the expected one.
 
@@ -289,6 +291,6 @@ python -m unittest math_operations.py
 
 By adhering to these best practices, you will enhance the quality, readability, and maintainability of your code. This will not only make your programming assignments more robust and reliable but also prepare you for professional software development. Consistently applying these principles will lead to better collaboration, easier debugging, and a more enjoyable coding experience.
 
-## Acknowlegements
+## Acknowledgements
 
 The code snippets were generated automatically thanks to GitHub Copilot.
